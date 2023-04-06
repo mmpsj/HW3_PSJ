@@ -3,7 +3,9 @@ def reverse_words(string):
     str_list.reverse()
     string = ""
     for i in range(0, len(str_list)):
-        string += str_list[i]
+        if (str_list[i].strip() == ""):
+            continue
+        string += str_list[i].strip()
         if (i != len(str_list) - 1):
             string += " "
     return string
